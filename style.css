@@ -5,7 +5,7 @@ body {
   font-style: normal;
   padding: 20px;
   min-height: 100vh;
-  background: url('img/beach.jpg');
+  background: url("img/beach.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,7 +23,6 @@ body {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  
 }
 
 .modal-content {
@@ -34,7 +33,6 @@ body {
   padding: 20px;
   border: 1px solid #888;
   width: 50%;
-  
 }
 
 .close-btn {
@@ -59,13 +57,10 @@ body {
 
 h1 {
   display: flex;
-  justify-content: center ;
-  background: linear-gradient(to right, rgb(206, 146, 255), rgb(83, 11, 252));
-      background-clip: text;
-      color: transparent;
-  
-
-
+  justify-content: center;
+  background: linear-gradient(to right, rgb(41, 6, 70), rgb(100, 4, 104));
+  background-clip: text;
+  color: transparent;
 }
 
 table {
@@ -87,8 +82,32 @@ td {
 }
 
 button {
-  margin: 10px;
+ margin-left: auto;
+ margin-right: auto;
   display: flex;
-  justify-content: center ;
-  align-items:  center;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 1000px;
+  position: relative;
+}
+button::after {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 103%;
+  border-radius: 1000px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(206, 146, 255),
+    rgb(83, 11, 252)
+  );
+  z-index: -1;
+}
+button:hover {
+  color: #ddd;
+  z-index: 0;
+  box-shadow: 10px 0 80px rgba(83, 11, 252, 0.425),
+    -10px 0 80px rgba(206, 146, 255, 0.473);
 }
